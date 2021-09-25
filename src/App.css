@@ -1,5 +1,5 @@
 .App {
-  text-align:left;
+  text-align: left;
   display: flex;
   margin: 5px;
 }
@@ -53,16 +53,20 @@
 
 .site {
   display: inline-block;
-  width: 50%;
+  width: 70%;
   height: 90%;
 }
 
 .first-group,
 .second-group {
     padding: 20px;
-    margin: 10px;
+    margin: 20px;
 }
 
 .second-group {
     background-color: rgba(191, 191, 191, 0.15);
+}
+
+.scheduleGraph {
+  margin-left: 2%;
 }

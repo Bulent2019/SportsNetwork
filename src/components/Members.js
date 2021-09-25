@@ -56,7 +56,6 @@ export default function Members() {
     let interestsOptions = {
       items: interests
     };
-    // let phoneOptions = { mask: '+358-449847217' };
     let notesOptions = { height: 140 };
 
     
@@ -96,12 +95,7 @@ export default function Members() {
               <SimpleItem dataField="ZipCode" />
             </GroupItem>
             <GroupItem>
-              <TabbedItem
-                // dataField="Mobile"
-                // editorOptions={phoneOptions}>
-                // <Label text="Phone" 
-              >
-                
+              <TabbedItem>
                 <TabPanelOptions deferRendering={false}/>
                 <Tab title="Phone">
                   <SimpleItem dataField="Phone"/>

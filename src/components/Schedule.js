@@ -1,9 +1,7 @@
 import React from 'react';
+import '../App.css';
 import Scheduler, { Resource } from 'devextreme-react/scheduler';
 import { formatDate } from 'devextreme/localization';
-
-// import RangeSelector, { Margin, Scale, Label, Behavior, Format } from 'devextreme-react/range-selector';
-// import DataGrid from 'devextreme-react/data-grid';
 
 
 export default function Schedule() {
@@ -121,34 +119,21 @@ export default function Schedule() {
         )
     }
 
-    // const [filter, setFilter] = React.useState({startDate: data.startDate, endDate: data.endDate});
-    // const columns = ['FirstName', 'StartDate', 'EndDate'];
-
-    // const filterMembers = ({ value }) => {
-    //     setFilter({
-    //       selectedMembers: member.filter(members => members.startDate >= value[0] && members.endDate <= value[1] || !value.length)
-    //     });
-    //   }
-
-      const Interation = () => {
-              data.map = (date, index) => {
-                console.log(date.startDate);
-              }
-      }
-      Interation();
 
   return (
     <div>
-        <h1 style={{textAlign:'left'}}>Scheduler</h1>
 
+        
+        <h1 className="scheduleGraph" style={{textAlign:'left'}}>Scheduler</h1>
         <Scheduler
+            className="scheduleGraph"
             dataSource={data}
             views={['day', 'week', 'month']}
             maxAppointmentsPerCell={'unlimited'} 
             groups={groups}
             defaultCurrentDate={Date.now()}
             defaultCurrentView="week"
-            height={500}
+            height={600}
             width={900}
             firstDayOfWeek={1}
             startDayHour={7}
@@ -170,28 +155,6 @@ export default function Schedule() {
         </Scheduler>
 
         <div style={{marginTop: '20px'}} className='App'>
-            {/* <RangeSelector
-                id="range-selector"
-                title="Time Range"
-                dataSource={data}
-                dataSourceField="Freetime"
-                onValueChanged={filterMembers}
-            >
-                <Margin top={20} />
-                <Scale tickInterval={1} minorTickInterval={1}>
-                    <Label>
-                    <Format type="decimal" />
-                    </Label>
-                </Scale>
-                <Behavior callValueChanged="onMoving" />
-            </RangeSelector>
-            <h2 className="grid-header">Available Members</h2>
-            <DataGrid
-                dataSource={filter}
-                columns={columns}
-                showBorders={true}
-                columnAutoWidth={true}
-            /> */}
         </div>
     </div>
   );
