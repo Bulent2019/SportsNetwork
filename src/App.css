@@ -1,5 +1,7 @@
 .App {
-  text-align: center;
+  text-align:left;
+  display: flex;
+  margin: 5px;
 }
 
 .App-logo {
@@ -35,4 +37,32 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.form-avatar {
+  height: 128px;
+  width: 128px;
+  margin-right: 10px;
+  border: 1px solid #d2d3d5;
+  border-radius: 50%;
+  background-image: url('images/me.j.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.site {
+  display: inline-block;
+  width: 50%;
+  height: 90%;
+}
+
+.first-group,
+.second-group {
+    padding: 20px;
+    margin: 10px;
+}
+
+.second-group {
+    background-color: rgba(191, 191, 191, 0.15);
 }
